@@ -1,19 +1,10 @@
-// userInfo.js
+// arrayManipulation.js
 
 /*
-
- * 
- * @param {string[]} names 
- * @param {string[]} modifiedNames 
- * @returns {Object[]} -
+ * @param {number[]} arr 
+ * @returns {number[]} 
  */
-function createUserProfiles(names, modifiedNames) {
-    return names.map((name, index) => ({
-        originalName: name,
-        modifiedName: modifiedNames[index],
-        id: index + 1
-    }));
+function processArray(arr) {
+    return arr.map(num => (num % 2 === 0 ? num ** 2 : num * 3));
 }
-
-// Export the function for use in other files
-module.exports = { createUserProfiles };
+module.exports = { processArray };
